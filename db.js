@@ -1,7 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
-const Messages = require('./models/messages.js');
+const Blogs = require('./models/blog.js');
 require('dotenv').config();
 
 // Load DB config from config file
@@ -9,7 +9,7 @@ var config = require(path.join(__dirname, 'config', 'config.js'));
 
 // Init sequelize with params from config file
 console.log('Create sequelize...');
-var sequelize = new Sequelize('postgres://postgres:' + process.env.LOCAL_DB_PW + '@localhost:1234/bulletinboard');
+var sequelize = new Sequelize('postgres://postgres:' + process.env.LOCAL_DB_PW + '@localhost:1234/postgres');
 
 // Empty db object to hold our models
 var db = {};
