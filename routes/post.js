@@ -1,11 +1,13 @@
 const express = require('express');
 const Sequelize = require('sequelize');
 var Blogs = require('../db').blog;
+require('dotenv').config();
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('post');
+    let route = process.env.POST_ROUTE;
+    res.render('post', { route: route });
 });
 
 router.post('/', (req, res) => {
