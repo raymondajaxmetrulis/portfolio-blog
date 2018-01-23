@@ -9,7 +9,7 @@ var config = require(path.join(__dirname, 'config', 'config.js'));
 
 // Init sequelize with params from config file
 console.log('Create sequelize...');
-var sequelize = new Sequelize('postgres://postgres:' + process.env.LOCAL_DB_PW + '@localhost:1234/postgres');
+var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 // Empty db object to hold our models
 var db = {};
