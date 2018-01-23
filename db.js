@@ -25,6 +25,11 @@ fs.readdirSync(path.join(__dirname, 'models'))
 	db[model.name] = model;
 });
 
+var Blog = sequelize.define('blogs', {
+	title: Sequelize.TEXT,
+	body: Sequelize.TEXT
+});
+
 Object.keys(db).forEach(function(modelName) {
   if ("associate" in db[modelName]) {
   	db[modelName].associate(db)
