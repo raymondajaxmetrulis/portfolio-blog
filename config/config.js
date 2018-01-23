@@ -15,7 +15,7 @@ const CONFIGURATION = {
     	"password": process.env.HEROKU_DB_PW,
     	"host": process.env.HEROKU_DB_HOST,
     	"port": 5432,
-    	"database": process.env.HEROKU_DB_NAME
+    	"database": process.env.HEROKU_DB_NAM
   	}
 }
 
