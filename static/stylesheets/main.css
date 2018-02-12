@@ -1,3 +1,16 @@
+@media all (max-width: 992px) 
+and (max-height: 720px) {
+	body {
+		
+	}
+}
+
+@media all (max-width: 768px) {
+	body {
+		
+	}
+}
+
 body {
 	width: 100%;
 	height: auto;
@@ -40,3 +53,4 @@ h1 {
 .linkle {
 	font-size: 300%;
 }
+
