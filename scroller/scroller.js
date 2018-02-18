@@ -1,3 +1,5 @@
+var d3 = require("d3");
+
 function scroller() {
   var container = d3.select('#body');
   // // active refers to the element in the viewport
@@ -56,7 +58,7 @@ function scroller() {
       dispatch.call('active', this, sectionIndex);
       currentIndex = sectionIndex;
     }
-
+    // // Where user has scrolled within a section for within-section visualizations
     var prevIndex = Math.max(sectionIndex - 1, 0);
     var prevLeft = sectionPositions[prevIndex];
     var progress = (pos - prevLeft) / (sectionPositions[sectionIndex] - prevLeft);
