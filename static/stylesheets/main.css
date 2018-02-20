@@ -12,20 +12,12 @@ and (max-height: 720px) {
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	text-align: center;
 	font-family: 'Alegreya SC';
-}
-
-.wrapper {
-	display: inline-block;
-	width: 100%;
-	height: auto;
 }
 
 .header {
 	width: 100%;
+	height: 8%;
 	position: fixed;
 	top: 0;
 }
