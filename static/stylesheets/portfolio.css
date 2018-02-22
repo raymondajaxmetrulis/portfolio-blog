@@ -28,15 +28,10 @@
 }
 
 #projects {
-	height: 60%;
-	width: 40%;
 	text-align: center;
 	display: inline-block;
   	position: fixed;
-  	top: 60px;
-  	left: 30%;
   	z-index: 1;
-  	background-color: #ddd;
 }
 
 
