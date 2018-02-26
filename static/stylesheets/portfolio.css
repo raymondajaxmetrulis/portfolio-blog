@@ -1,11 +1,11 @@
 .wrapper {
 	height: 100%;
-	width: auto;
+	width: 100%;
 }
 
 #body {
 	height: 100%;
-	width: 300%;
+	width: 1000%;
 }
 
 #sections {
@@ -13,14 +13,14 @@
   display: inline-block;
   height: 20%;
   top: 80%;
-  left: 10%;
+  left: 1%;
   z-index: 90;
 }
 
 .step {
 	border: 2px solid black;
 	margin-right: 400px;
-	float: right;
+	float: left;
 }
 
 .about1, .about2 {
@@ -34,5 +34,29 @@
   	z-index: 1;
 }
 
+.title {
+  font-family: Arial,Helvetica,"san-serif";
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #262626;
+  line-height: 1.2em;
+}
 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
 
+.highlight {
+  fill: #008080;
+  font-weight: bold;
+}
+
+.cough-arrow {
+  stroke: #000;
+  stroke-width: 4px;
+
+}
