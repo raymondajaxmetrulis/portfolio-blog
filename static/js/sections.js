@@ -6,12 +6,6 @@ var scrollVis = function () {
 	var lastIndex = -1;
 	var activeIndex = 0;
 	
-	var squareSize = 10;
-	var squarePad = 2;
-	var numPerRow = width / (squareSize + squarePad);
-	var svg = null;
-	var g = null;
-
 	var xBarScale = d3.scaleLinear()
 	    .range([0, width]);
 	var xAxisBar = d3.axisBottom()
@@ -46,137 +40,124 @@ var scrollVis = function () {
 			.attr('transform', 'translate(0,' + height + ')')
 			.call(xAxisBar);
 		g.select('.x.axis').style('opacity', 0);
-		// count openvis title
+		
 		g.append('text')
-			.attr('class', 'title openvis-title')
+			.attr('class', 'title about-title')
 			.attr('x', width / 2)
 			.attr('y', height / 3)
-			.text('2013');
+			.text('About');
 		g.append('text')
-			.attr('class', 'sub-title openvis-title')
+			.attr('class', 'sub-title about-title')
 			.attr('x', width / 2)
 			.attr('y', (height / 3) + (height / 5))
-			.text('OpenVis Conf');
-		g.selectAll('.openvis-title')
+			.text('Raymond Ajax Metrulis');
+		g.selectAll('.about-title')
 			.attr('opacity', 0);
-		// count filler word count title
+		
 		g.append('text')
-			.attr('class', 'title count-title highlight')
+			.attr('class', 'title project-one')
 			.attr('x', width / 2)
 			.attr('y', height / 3)
-			.text('180');
+			.text('Project');
 		g.append('text')
-			.attr('class', 'sub-title count-title')
+			.attr('class', 'sub-title project-one')
 			.attr('x', width / 2)
 			.attr('y', (height / 3) + (height / 5))
-			.text('Filler Words');
-		g.selectAll('.count-title')
+			.text('One');
+		g.selectAll('.project-one')
 			.attr('opacity', 0);
-		// square grid
-		var squares = g.selectAll('.square').data(wordData, function (d) { return d.word; });
-		var squaresE = squares.enter()
-			.append('rect')
-			.classed('square', true);
-		squares = squares.merge(squaresE)
-			.attr('width', squareSize)
-			.attr('height', squareSize)
-			.attr('fill', '#fff')
-			.classed('fill-square', function (d) { return d.filler; })
-			.attr('x', function (d) { return d.x;})
-			.attr('y', function (d) { return d.y;})
+
+		g.append('text')
+			.attr('class', 'title project-two')
+			.attr('x', width / 2)
+			.attr('y', height / 3)
+			.text('Project');
+		g.append('text')
+			.attr('class', 'sub-title project-two')
+			.attr('x', width / 2)
+			.attr('y', (height / 3) + (height / 5))
+			.text('Two');
+		g.selectAll('.project-two')
+			.attr('opacity', 0);
+
+		g.append('text')
+			.attr('class', 'title project-three')
+			.attr('x', width / 2)
+			.attr('y', height / 3)
+			.text('Project');
+		g.append('text')
+			.attr('class', 'sub-title project-three')
+			.attr('x', width / 2)
+			.attr('y', (height / 3) + (height / 5))
+			.text('Three');
+		g.selectAll('.project-three')
 			.attr('opacity', 0);
 	};
 
 	var setupSections = function () {
-		activateFunctions[0] = showTitle;
-		activateFunctions[1] = showFillerTitle;
-		activateFunctions[2] = showGrid;
-		activateFunctions[3] = highlightGrid;
+		activateFunctions[0] = aboutMe;
+		activateFunctions[1] = projectOne;
+		activateFunctions[2] = projectTwo;
+		activateFunctions[3] = projectThree;
 		for (var i = 0; i < 4; i++) {
 			updateFunctions[i] = function () {};
 		}
 	};
 
-	function showTitle() {
-		g.selectAll('.count-title')
+	function aboutMe() {
+		g.selectAll('.project-one')
 		    .transition()
 		    .duration(0)
 			.attr('opacity', 0);
-		g.selectAll('.openvis-title')
+		g.selectAll('.about-title')
 			.transition()
 		    .duration(1000)
 		    .attr('opacity', 1.0);
 	}
 
-	function showFillerTitle() {
-		g.selectAll('.openvis-title')
+	function projectOne() {
+		g.selectAll('.about-title')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		g.selectAll('.square')
+		g.selectAll('.project-two')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		g.selectAll('.count-title')
+		g.selectAll('.project-one')
 		    .transition()
-		    .duration(2000)
+		    .duration(1000)
 		    .attr('opacity', 1.0);
 	}
 
-	function showGrid() {
-		g.selectAll('.count-title')
-		   	.transition()
+	function projectTwo() {
+		g.selectAll('.project-one')
+		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		g.selectAll('.square')
+		g.selectAll('.project-three')
 		    .transition()
-		    .duration(2000)
-		    .delay(function (d) {
-		    	return 5 * d.row;
-		    })
-		    .attr('opacity', 1.0)
-		    .attr('fill', '#ddd');
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.project-two')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 	}
 
-	function highlightGrid() {
-		g.selectAll('.bar')
-		    .transition()
-		    .duration(600)
-		    .attr('width', 0);
-		g.selectAll('.bar-text')
+	function projectThree() {
+		g.selectAll('.project-two')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		g.selectAll('.square')
+		g.selectAll('.project-three')
 		    .transition()
-		    .duration(0)
-		    .attr('opacity', 1.0)
-		    .attr('fill', '#ddd');
-		g.selectAll('.fill-square')
-		    .transition('move-fills')
-		    .duration(2000)
-		    .attr('x', function (d) {
-		    	return d.x;
-		    })
-		    .attr('y', function (d) {
-		        return d.y;
-			});
-		g.selectAll('.fill-square')
-		    .transition()
-		    .duration(800)
-		    .attr('opacity', 1.0)
-		    .attr('fill', function (d) { return d.filler ? '#008080' : '#ddd'; });
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 	}
 
 	function getWords(rawData) {
-		return rawData.map(function (d, i) {
-			d.filler = (d.filler === '1') ? true : false;
-			d.time = +d.time;
-			d.min = Math.floor(d.time / 60);
-		  	d.col = i % numPerRow;
-	     	d.x = d.col * (squareSize + squarePad);
-	      	d.row = Math.floor(i / numPerRow);
-	      	d.y = d.row * (squareSize + squarePad);
+		return rawData.map(function (d) {
 	      	return d;
 		});
 	}
