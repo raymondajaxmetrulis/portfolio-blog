@@ -1,7 +1,7 @@
 var scrollVis = function () {
-	var width = 600;
-	var height = 420;
-	var margin = { top: 80, left: 400, bottom: 0, right: 0 };
+	var width = 612;
+	var height = 600;
+	var margin = { top: 0, left: 0, bottom: 0, right: 0 };
 	
 	var lastIndex = -1;
 	var activeIndex = 0;
@@ -104,7 +104,7 @@ var scrollVis = function () {
 			.attr('opacity', 0);
 		g.selectAll('.openvis-title')
 			.transition()
-		    .duration(600)
+		    .duration(1000)
 		    .attr('opacity', 1.0);
 	}
 
@@ -119,7 +119,7 @@ var scrollVis = function () {
 		    .attr('opacity', 0);
 		g.selectAll('.count-title')
 		    .transition()
-		    .duration(600)
+		    .duration(2000)
 		    .attr('opacity', 1.0);
 	}
 
@@ -130,7 +130,7 @@ var scrollVis = function () {
 		    .attr('opacity', 0);
 		g.selectAll('.square')
 		    .transition()
-		    .duration(600)
+		    .duration(2000)
 		    .delay(function (d) {
 		    	return 5 * d.row;
 		    })
@@ -154,7 +154,7 @@ var scrollVis = function () {
 		    .attr('fill', '#ddd');
 		g.selectAll('.fill-square')
 		    .transition('move-fills')
-		    .duration(800)
+		    .duration(2000)
 		    .attr('x', function (d) {
 		    	return d.x;
 		    })

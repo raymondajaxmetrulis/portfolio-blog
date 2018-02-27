@@ -5,26 +5,7 @@
 
 #body {
 	height: 100%;
-	width: 1000%;
-}
-
-#sections {
-  position: relative;
-  display: inline-block;
-  height: 20%;
-  top: 80%;
-  left: 1%;
-  z-index: 90;
-}
-
-.step {
-	border: 2px solid black;
-	margin-right: 400px;
-	float: left;
-}
-
-.about1, .about2 {
-	font-size: 20px;
+	width: 300%;
 }
 
 #projects {
@@ -32,6 +13,11 @@
 	display: inline-block;
   	position: fixed;
   	z-index: 1;
+  	border: 2px solid black;
+  	height: 80%;
+  	width: 40%;
+  	top: 8%;
+  	left: 30%;
 }
 
 .title {
@@ -55,8 +41,21 @@
   font-weight: bold;
 }
 
-.cough-arrow {
-  stroke: #000;
-  stroke-width: 4px;
+#sections {
+  	position: relative;
+  	display: inline-block;
+  	width: 100%;
+  	height: 10%;
+  	top: 89%;
+  	z-index: 90;
+  	border: 2px solid black;
+  	padding-left: 8%;
+}
 
+.step {
+	border: 2px solid black;
+	margin-right: 349px;
+	float: left;
+	width: 17.25%;
+	height: 96%;
 }
