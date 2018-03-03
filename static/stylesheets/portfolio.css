@@ -13,32 +13,15 @@
 	display: inline-block;
   	position: fixed;
   	z-index: 1;
-  	border: 2px solid black;
-  	height: 80%;
+  	height: 81%;
   	width: 40%;
   	top: 8%;
   	left: 30%;
 }
 
-.title {
-  font-family: Arial,Helvetica,"san-serif";
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 2px;
-  color: #262626;
-  line-height: 1.2em;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #666;
-  shape-rendering: crispEdges;
-}
-
-.highlight {
-  fill: #008080;
-  font-weight: bold;
+.project-one, .project-two, .project-three {
+	width: 100%;
+	height: 99%;
 }
 
 #sections {
@@ -48,14 +31,48 @@
   	height: 10%;
   	top: 89%;
   	z-index: 90;
-  	border: 2px solid black;
   	padding-left: 8%;
 }
 
 .step {
-	border: 2px solid black;
+	border-top: 2px solid black;
 	margin-right: 349px;
 	float: left;
 	width: 17.25%;
 	height: 96%;
+}
+
+.title {
+	font-family: Arial,Helvetica,"san-serif";
+	font-size: 16px;
+	font-weight: bold;
+	color: #262626;
+	line-height: 1.2em;
+	width: 100%;
+	height: 86%;
+}
+
+.description {
+	border-right: 2px solid black;
+	width: 81%;
+	height: 100%;
+	display: inline-block;
+}
+
+.project-links {
+	float: right;
+	height: 100%;
+	width: 18%;
+	display: inline-block;
+}
+
+.github {
+	width: 42%;
+	display: inline-block;
+}
+
+.heroku {
+	float: right;
+	width: 50%;
+	display: inline-block;
 }

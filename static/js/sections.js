@@ -54,42 +54,27 @@ var scrollVis = function () {
 		g.selectAll('.about-title')
 			.attr('opacity', 0);
 		
-		g.append('text')
-			.attr('class', 'title project-one')
-			.attr('x', width / 2)
-			.attr('y', height / 3)
-			.text('Project');
-		g.append('text')
-			.attr('class', 'sub-title project-one')
-			.attr('x', width / 2)
-			.attr('y', (height / 3) + (height / 5))
-			.text('One');
+		g.append('svg:image')
+			.attr('xlink:href', 'images/cam.png')
+			.attr('class', 'project-one')
+			.attr('x', width / 300)
+			.attr('y', height / 200)
 		g.selectAll('.project-one')
 			.attr('opacity', 0);
 
-		g.append('text')
-			.attr('class', 'title project-two')
-			.attr('x', width / 2)
-			.attr('y', height / 3)
-			.text('Project');
-		g.append('text')
-			.attr('class', 'sub-title project-two')
-			.attr('x', width / 2)
-			.attr('y', (height / 3) + (height / 5))
-			.text('Two');
+		g.append('svg:image')
+			.attr('xlink:href', 'images/knight.jpg')
+			.attr('class', 'project-two')
+			.attr('x', width / 300)
+			.attr('y', height / 200)
 		g.selectAll('.project-two')
 			.attr('opacity', 0);
 
-		g.append('text')
-			.attr('class', 'title project-three')
-			.attr('x', width / 2)
-			.attr('y', height / 3)
-			.text('Project');
-		g.append('text')
-			.attr('class', 'sub-title project-three')
-			.attr('x', width / 2)
-			.attr('y', (height / 3) + (height / 5))
-			.text('Three');
+		g.append('svg:image')
+			.attr('xlink:href', 'images/logo.jpg')
+			.attr('class', 'project-three')
+			.attr('x', width / 300)
+			.attr('y', height / 200)
 		g.selectAll('.project-three')
 			.attr('opacity', 0);
 	};
