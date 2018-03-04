@@ -46,19 +46,21 @@ var scrollVis = function () {
 			.attr('x', width / 2)
 			.attr('y', height / 3)
 			.text('About');
-		g.append('text')
-			.attr('class', 'sub-title about-title')
-			.attr('x', width / 2)
-			.attr('y', (height / 3) + (height / 5))
-			.text('Raymond Ajax Metrulis');
+		g.append('svg:image')
+			.attr('xlink:href', 'images/me.jpg')
+			.attr('class', 'me')
+			.attr('x', width / 300)
+			.attr('y', height / 300);
 		g.selectAll('.about-title')
+			.attr('opacity', 0);
+		g.selectAll('.me')
 			.attr('opacity', 0);
 		
 		g.append('svg:image')
 			.attr('xlink:href', 'images/cam.png')
 			.attr('class', 'project-one')
 			.attr('x', width / 300)
-			.attr('y', height / 200)
+			.attr('y', height / 200);
 		g.selectAll('.project-one')
 			.attr('opacity', 0);
 
@@ -66,7 +68,7 @@ var scrollVis = function () {
 			.attr('xlink:href', 'images/knight.jpg')
 			.attr('class', 'project-two')
 			.attr('x', width / 300)
-			.attr('y', height / 200)
+			.attr('y', height / 200);
 		g.selectAll('.project-two')
 			.attr('opacity', 0);
 
@@ -74,7 +76,7 @@ var scrollVis = function () {
 			.attr('xlink:href', 'images/logo.jpg')
 			.attr('class', 'project-three')
 			.attr('x', width / 300)
-			.attr('y', height / 200)
+			.attr('y', height / 200);
 		g.selectAll('.project-three')
 			.attr('opacity', 0);
 	};
@@ -98,10 +100,18 @@ var scrollVis = function () {
 			.transition()
 		    .duration(1000)
 		    .attr('opacity', 1.0);
+		g.selectAll('.me')
+			.transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 	}
 
 	function projectOne() {
 		g.selectAll('.about-title')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.me')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);

@@ -20,6 +20,8 @@ body {
 	height: 8%;
 	position: fixed;
 	top: 0;
+	border-bottom: 2px solid black;
+	z-index: 2;
 }
 
 .name {

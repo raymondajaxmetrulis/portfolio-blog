@@ -3,9 +3,36 @@
 	width: 100%;
 }
 
+#left-divider, #right-divider {
+	position: fixed;
+	background-color: black;
+	top: 8%;
+	width: 5%;
+	height: 92%;
+	z-index: 4;
+}
+
+#left-divider {
+	right: 0;
+}
+
+#right-divider {
+	left: 0;
+}
+
+.skills {
+	position: fixed;
+	top: 8%;
+	left: 0;
+	width: 45%;
+	height: 92%;
+	background-color: grey;
+	z-index: 3;
+}
+
 #body {
 	height: 100%;
-	width: 300%;
+	width: 250%;
 }
 
 #projects {
@@ -13,10 +40,17 @@
 	display: inline-block;
   	position: fixed;
   	z-index: 1;
+  	border-left: 2px solid black;
+  	border-right: 2px solid black;
   	height: 81%;
   	width: 40%;
   	top: 8%;
-  	left: 30%;
+  	left: 45%;
+}
+
+.me {
+	width: 50%;
+	height: 50%;
 }
 
 .project-one, .project-two, .project-three {
@@ -30,15 +64,15 @@
   	width: 100%;
   	height: 10%;
   	top: 89%;
-  	z-index: 90;
-  	padding-left: 8%;
+  	left: 13.5%;
+  	z-index: 2;
 }
 
 .step {
 	border-top: 2px solid black;
-	margin-right: 349px;
 	float: left;
-	width: 17.25%;
+	margin-left: 10.8em;
+	width: 20%;
 	height: 96%;
 }
 
@@ -53,16 +87,16 @@
 }
 
 .description {
-	border-right: 2px solid black;
-	width: 81%;
+	width: 20%;
 	height: 100%;
 	display: inline-block;
 }
 
 .project-links {
 	float: right;
+	border-left: 2px solid black;
 	height: 100%;
-	width: 18%;
+	width: 19.5%;
 	display: inline-block;
 }
 
@@ -73,6 +107,7 @@
 
 .heroku {
 	float: right;
-	width: 50%;
+	width: 40%;
 	display: inline-block;
+	margin-right: 10%;
 }
