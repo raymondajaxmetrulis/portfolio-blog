@@ -1,5 +1,5 @@
 var scrollVis = function () {
-	var width = 612;
+	var width = 766;
 	var height = 600;
 	var margin = { top: 0, left: 0, bottom: 0, right: 0 };
 	
@@ -42,41 +42,88 @@ var scrollVis = function () {
 		g.select('.x.axis').style('opacity', 0);
 		
 		g.append('text')
-			.attr('class', 'title about-title')
-			.attr('x', width / 2)
-			.attr('y', height / 3)
+			.attr('class', 'scroll-to-projects')
+			.attr('x', 600)
+			.attr('y', 100)
+			.text('Scroll to see projects');
+		g.append('text')
+			.attr('class', 'about-title')
+			.attr('x', 600)
+			.attr('y', 400)
 			.text('About');
+		g.append('text')
+			.attr('class', 'ajax-title')
+			.attr('x', 600)
+			.attr('y', 450)
+			.text('Ajax');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/me.jpg')
 			.attr('class', 'me')
-			.attr('x', width / 300)
-			.attr('y', height / 300);
+			.attr('x', 47)
+			.attr('y', 2);
+		g.selectAll('.scroll-to-projects')
+			.attr('opacity', 0);
 		g.selectAll('.about-title')
+			.attr('opacity', 0);
+		g.selectAll('.ajax-title')
 			.attr('opacity', 0);
 		g.selectAll('.me')
 			.attr('opacity', 0);
 		
+		g.append('text')
+			.attr('class', 'title-one')
+			.attr('x', 600)
+			.attr('y', 400)
+			.text('Instafake');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/cam.png')
 			.attr('class', 'project-one')
-			.attr('x', width / 300)
-			.attr('y', height / 200);
+			.attr('x', 24)
+			.attr('y', 10.5);
+		g.selectAll('.title-one')
+			.attr('opacity', 0);
 		g.selectAll('.project-one')
 			.attr('opacity', 0);
 
+		g.append('text')
+			.attr('class', 'title-two-a')
+			.attr('x', 600)
+			.attr('y', 400)
+			.text('Petty');
+		g.append('text')
+			.attr('class', 'title-two-b')
+			.attr('x', 600)
+			.attr('y', 450)
+			.text('Cash');
+		g.append('text')
+			.attr('class', 'title-two-c')
+			.attr('x', 600)
+			.attr('y', 500)
+			.text('Quest');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/knight.jpg')
 			.attr('class', 'project-two')
-			.attr('x', width / 300)
-			.attr('y', height / 200);
+			.attr('x', 72);
+		g.selectAll('.title-two-a')
+			.attr('opacity', 0);
+		g.selectAll('.title-two-b')
+			.attr('opacity', 0);
+		g.selectAll('.title-two-c')
+			.attr('opacity', 0);
 		g.selectAll('.project-two')
 			.attr('opacity', 0);
 
+		g.append('text')
+			.attr('class', 'title-three')
+			.attr('x', 600)
+			.attr('y', 400)
+			.text('Cart-o-grapher');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/logo.jpg')
 			.attr('class', 'project-three')
-			.attr('x', width / 300)
-			.attr('y', height / 200);
+			.attr('y', 6);
+		g.selectAll('.title-three')
+			.attr('opacity', 0);
 		g.selectAll('.project-three')
 			.attr('opacity', 0);
 	};
@@ -92,26 +139,58 @@ var scrollVis = function () {
 	};
 
 	function aboutMe() {
+		g.selectAll('.title-one')
+		    .transition()
+		    .duration(0)
+			.attr('opacity', 0);
 		g.selectAll('.project-one')
 		    .transition()
 		    .duration(0)
 			.attr('opacity', 0);
+		g.selectAll('.scroll-to-projects')
+			.transition()
+		    .duration(6000)
+		    .attr('opacity', 1.0);
 		g.selectAll('.about-title')
 			.transition()
 		    .duration(1000)
 		    .attr('opacity', 1.0);
 		g.selectAll('.me')
 			.transition()
-		    .duration(1000)
+		    .duration(4000)
+		    .attr('opacity', 1.0);
+		g.selectAll('.ajax-title')
+			.transition()
+		    .duration(4500)
 		    .attr('opacity', 1.0);
 	}
 
 	function projectOne() {
+		g.selectAll('.scroll-to-projects')
+			.transition()
+		    .duration(0)
+		    .attr('opacity', 0);
 		g.selectAll('.about-title')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
+		g.selectAll('.ajax-title')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
 		g.selectAll('.me')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-two-a')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-two-b')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-two-c')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
@@ -119,6 +198,10 @@ var scrollVis = function () {
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
+		g.selectAll('.title-one')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 		g.selectAll('.project-one')
 		    .transition()
 		    .duration(1000)
@@ -126,7 +209,15 @@ var scrollVis = function () {
 	}
 
 	function projectTwo() {
+		g.selectAll('.title-one')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
 		g.selectAll('.project-one')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-three')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
@@ -134,6 +225,18 @@ var scrollVis = function () {
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
+		g.selectAll('.title-two-a')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
+		g.selectAll('.title-two-b')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
+		g.selectAll('.title-two-c')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 		g.selectAll('.project-two')
 		    .transition()
 		    .duration(1000)
@@ -141,10 +244,26 @@ var scrollVis = function () {
 	}
 
 	function projectThree() {
+		g.selectAll('.title-two-a')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-two-b')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
+		g.selectAll('.title-two-c')
+		    .transition()
+		    .duration(0)
+		    .attr('opacity', 0);
 		g.selectAll('.project-two')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
+		g.selectAll('.title-three')
+		    .transition()
+		    .duration(1000)
+		    .attr('opacity', 1.0);
 		g.selectAll('.project-three')
 		    .transition()
 		    .duration(1000)
