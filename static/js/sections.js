@@ -42,30 +42,16 @@ var scrollVis = function () {
 		g.select('.x.axis').style('opacity', 0);
 		
 		g.append('text')
-			.attr('class', 'scroll-to-projects')
-			.attr('x', 600)
-			.attr('y', 100)
-			.text('Scroll to see projects');
-		g.append('text')
 			.attr('class', 'about-title')
 			.attr('x', 600)
-			.attr('y', 400)
+			.attr('y', 550)
 			.text('About');
-		g.append('text')
-			.attr('class', 'ajax-title')
-			.attr('x', 600)
-			.attr('y', 450)
-			.text('Ajax');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/me.jpg')
 			.attr('class', 'me')
 			.attr('x', 47)
 			.attr('y', 2);
-		g.selectAll('.scroll-to-projects')
-			.attr('opacity', 0);
 		g.selectAll('.about-title')
-			.attr('opacity', 0);
-		g.selectAll('.ajax-title')
 			.attr('opacity', 0);
 		g.selectAll('.me')
 			.attr('opacity', 0);
@@ -73,7 +59,7 @@ var scrollVis = function () {
 		g.append('text')
 			.attr('class', 'title-one')
 			.attr('x', 600)
-			.attr('y', 400)
+			.attr('y', 550)
 			.text('Instafake');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/cam.png')
@@ -88,17 +74,17 @@ var scrollVis = function () {
 		g.append('text')
 			.attr('class', 'title-two-a')
 			.attr('x', 600)
-			.attr('y', 400)
+			.attr('y', 450)
 			.text('Petty');
 		g.append('text')
 			.attr('class', 'title-two-b')
 			.attr('x', 600)
-			.attr('y', 450)
+			.attr('y', 500)
 			.text('Cash');
 		g.append('text')
 			.attr('class', 'title-two-c')
 			.attr('x', 600)
-			.attr('y', 500)
+			.attr('y', 550)
 			.text('Quest');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/knight.jpg')
@@ -116,7 +102,7 @@ var scrollVis = function () {
 		g.append('text')
 			.attr('class', 'title-three')
 			.attr('x', 600)
-			.attr('y', 400)
+			.attr('y', 550)
 			.text('Cart-o-grapher');
 		g.append('svg:image')
 			.attr('xlink:href', 'images/logo.jpg')
@@ -147,10 +133,6 @@ var scrollVis = function () {
 		    .transition()
 		    .duration(0)
 			.attr('opacity', 0);
-		g.selectAll('.scroll-to-projects')
-			.transition()
-		    .duration(6000)
-		    .attr('opacity', 1.0);
 		g.selectAll('.about-title')
 			.transition()
 		    .duration(1000)
@@ -159,22 +141,10 @@ var scrollVis = function () {
 			.transition()
 		    .duration(4000)
 		    .attr('opacity', 1.0);
-		g.selectAll('.ajax-title')
-			.transition()
-		    .duration(4500)
-		    .attr('opacity', 1.0);
 	}
 
 	function projectOne() {
-		g.selectAll('.scroll-to-projects')
-			.transition()
-		    .duration(0)
-		    .attr('opacity', 0);
 		g.selectAll('.about-title')
-		    .transition()
-		    .duration(0)
-		    .attr('opacity', 0);
-		g.selectAll('.ajax-title')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
@@ -313,5 +283,5 @@ function display(data) {
 		plot.update(index, progress);
 	});
 }
-// load data and display
+
 d3.tsv('data/words.tsv', display);
