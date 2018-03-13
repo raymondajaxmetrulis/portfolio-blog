@@ -3,6 +3,10 @@
 	width: 100%;
 }
 
+div {
+	box-sizing: border-box;
+}
+
 #left-divider, #right-divider {
 	position: fixed;
 	background-color: black;
@@ -75,7 +79,7 @@ h3 {
   	border-left: 2px solid black;
   	border-right: 2px solid black;
   	height: 75%;
-  	width: 38%;
+  	width: 38.4%;
   	top: 8%;
   	left: 45%;
 }
@@ -93,7 +97,7 @@ h3 {
 }
 
 .me {
-	width: 64%;
+	width: 64.5%;
 }
 
 .project-one {
@@ -137,7 +141,8 @@ h3 {
 }
 
 p {
-	font-size: 12px;
+	font-size: 10px;
+	font-family: 'Spectral SC', serif;
 }
 
 h4 {
@@ -175,3 +180,4 @@ h4 {
 	margin-right: 10%;
 	margin-top: 29%;
 }
+

@@ -49,8 +49,7 @@ var scrollVis = function () {
 		g.append('svg:image')
 			.attr('xlink:href', 'images/me.jpg')
 			.attr('class', 'me')
-			.attr('x', 47)
-			.attr('y', 2);
+			.attr('x', 45.5);
 		g.selectAll('.about-title')
 			.attr('opacity', 0);
 		g.selectAll('.me')
