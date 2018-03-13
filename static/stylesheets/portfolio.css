@@ -29,41 +29,67 @@ div {
 	top: 8%;
 	left: 0;
 	width: 45%;
-	height: 92%;
-	background-color: grey;
+	height: 92%; 
+    background: url('../images/code.jpg') no-repeat;
+    background-size: 180%;
+	border-right: 2px solid black;
 	z-index: 3;
 }
 
 .info-box {
+	margin-top: 10%;
 	margin-left: 15%;
-	border: 2px solid black;
-	width: 60%;
+	width: 80%;
 	display: inline-block;
+	padding: 5%;
+	text-align: center;
+	color: white;
 }
 
 h2 {
-	font-size: 30px;
+	margin-bottom: 5%;
+	font-size: 24px;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 28px;
 }
 
 .front-end {
 	display: inline-block;
+	float: left;
+	margin-left: 15%;
 }
 
 .back-end {
 	float: right;
+	margin-right: 15%;
 	display: inline-block;
 }
 
+li {
+	font-size: 18px;
+}
+
 .social-links {
-	float: right;
+	display: inline-block;
+	margin-top: 4%;
+	width: 80%;
+	height: 20%;
+	margin-left: 15%;
+	text-align: center;
+	padding-top: 2%;
+}
+
+.linkedin, .github-ajax, .gmail {
 	display: inline-block;
 	width: 20%;
-	height: 99%;
-	border: 2px solid black;
+	height: 80%;
+}
+
+.github-ajax {
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #body {
@@ -76,7 +102,6 @@ h3 {
 	display: inline-block;
   	position: fixed;
   	z-index: 1;
-  	border-left: 2px solid black;
   	border-right: 2px solid black;
   	height: 75%;
   	width: 38.4%;
@@ -141,7 +166,8 @@ h3 {
 }
 
 p {
-	font-size: 10px;
+	font-size: 12px;
+	line-height: 1.25;
 	font-family: 'Spectral SC', serif;
 }
 
