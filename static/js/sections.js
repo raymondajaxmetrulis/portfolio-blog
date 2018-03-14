@@ -283,4 +283,4 @@ function display(data) {
 	});
 }
 
-d3.tsv('', display);
+d3.tsv('../data/words.tsv', display);
