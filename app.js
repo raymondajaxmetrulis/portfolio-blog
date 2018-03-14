@@ -20,7 +20,7 @@ var postRoute = require('./routes/post');
 
 app.use('/portfolio', portfolioRoute);
 app.use('/blog', blogRoute);
-app.use(process.env.POST_ROUTE, postRoute);
+app.use('/swoop', postRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port);
