@@ -25,7 +25,7 @@ app.use('/portfolio', portfolioRoute);
 app.use('/blog', blogRoute);
 app.use('/swoop', postRoute);
 
-app.use('/*', function(req, res, next) {
+app.use('*', function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
