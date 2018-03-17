@@ -18,10 +18,15 @@ body {
 }
 
 .link {
-	float: right;
-	width: 20%;
+	width: 55%;
 	height: 100%;
-	background-color: grey;
+	background: url('../images/code.jpg') repeat;
+    background-size: 25%;
+	position: absolute;
+	left: 48.3%;
+	display: inline-block;
+	overflow: hidden;
+  	transform: skew(-60deg);
 }
 
 h1 {
@@ -30,5 +35,10 @@ h1 {
 
 .linkle {
 	font-size: 300%;
+	transform: skew(60deg);
+	float: right;
+	right: 10%;
+	position: absolute;
+	color: white;
 }
 
