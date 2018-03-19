@@ -1,3 +1,4 @@
+//routing middleware
 const express = require('express');
 const bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
@@ -23,7 +24,7 @@ var postRoute = require('./routes/post');
 
 app.use('/portfolio', portfolioRoute);
 app.use('/blog', blogRoute);
-app.use('/swoop', postRoute);
+app.use(process.env.POST_ROUTE, postRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port);

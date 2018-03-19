@@ -1,4 +1,5 @@
 var scrollVis = function () {
+	// scrollVis() determines what visuals are presented per section index
 	var lastIndex = -1;
 	var activeIndex = 0;
 
@@ -8,6 +9,7 @@ var scrollVis = function () {
 	var chart = function (selection) {
 		selection.each(function (rawData) {
 			svg = d3.select(this).selectAll('svg').data([true]);
+			// d3 visuals without the data. Single boolean value is the data instead.
 			var svgE = svg.enter().append('svg');
 			svg = svg.merge(svgE);
 			
@@ -17,6 +19,7 @@ var scrollVis = function () {
 	};
 	
 	var setupVis = function () {
+		// setupVis() creates svg elements with 0 opacity
 		svg.append('text')
 			.attr('class', 'about-title')
 			.text('About');
@@ -73,6 +76,7 @@ var scrollVis = function () {
 	};
 
 	var setupSections = function () {
+		// section visuals display ordering from left to right in array
 		activateFunctions[0] = aboutMe;
 		activateFunctions[1] = projectOne;
 		activateFunctions[2] = projectTwo;
@@ -81,7 +85,9 @@ var scrollVis = function () {
 			updateFunctions[i] = function () {};
 		}
 	};
-
+	// 4 img visuals for 4 sections. 
+	// Each section's elements become visible 
+	// and adjacent elements have opacity reduced to 0.
 	function aboutMe() {
 		svg.selectAll('.title-one')
 		    .transition()
@@ -199,6 +205,8 @@ var scrollVis = function () {
 	}
 
 	chart.activate = function (index) {
+		// keep track of current index accordingly as user scrolls 
+		// and activate the above functions based on activeIndex
 		activeIndex = index;
 		var sign = (activeIndex - lastIndex) < 0 ? -1 : 1;
 	    var scrolledSections = d3.range(lastIndex + sign, activeIndex + sign, sign);
@@ -215,6 +223,8 @@ var scrollVis = function () {
 };
 
 function display(data) {
+	// once data is loaded, display() is ready to call all necessary functions
+	// connects ejs elements with the svg elements
 	var plot = scrollVis();
 	d3.select('#projects')
 		.call(plot);
