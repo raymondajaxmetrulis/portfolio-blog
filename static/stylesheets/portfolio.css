@@ -8,30 +8,13 @@ div {
 	height: auto;
 }
 
-#left-divider, #right-divider {
-	position: fixed;
-	background-color: black;
-	top: 8%;
-	width: 5%;
-	height: 92%;
-	z-index: 4;
-}
-
-#left-divider {
-	right: 0;
-}
-
-#right-divider {
-	left: 0;
-}
-
 .static-column {
 	position: fixed;
 	top: 8%;
 	left: 0;
 	width: 45%;
 	height: 92%; 
-    background: url('../images/code.jpg') no-repeat;
+    background-color: black;
     background-size: 250%;
 	border-right: 2px solid black;
 	z-index: 3;

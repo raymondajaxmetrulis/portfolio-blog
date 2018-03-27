@@ -19,12 +19,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 var portfolioRoute = require('./routes/portfolio');
-var blogRoute = require('./routes/blog');
-var postRoute = require('./routes/post');
+// var blogRoute = require('./routes/blog');
+// var postRoute = require('./routes/post');
 
-app.use('/portfolio', portfolioRoute);
-app.use('/blog', blogRoute);
-app.use(process.env.POST_ROUTE, postRoute);
+app.use('/', portfolioRoute);
+// app.use('/blog', blogRoute);
+// app.use(process.env.POST_ROUTE, postRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port);

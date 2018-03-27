@@ -13,32 +13,22 @@ body {
 .name {
 	float: left;
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	background-color: lightblue;
 }
 
 .link {
-	width: 55%;
+	width: 80%;
 	height: 100%;
-	background: url('../images/code.jpg') repeat;
+	background-color: black;
     background-size: 25%;
 	position: absolute;
-	left: 48.3%;
+	left: 40.9%;
 	display: inline-block;
 	overflow: hidden;
-  	transform: skew(-60deg);
+  	transform: skew(65deg);
 }
 
 h1 {
-	font-size: 300%;
+	font-size: 3em;
 }
-
-.linkle {
-	font-size: 300%;
-	transform: skew(60deg);
-	float: right;
-	right: 10%;
-	position: absolute;
-	color: white;
-}
-
