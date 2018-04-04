@@ -22,7 +22,7 @@ var portfolioRoute = require('./routes/portfolio');
 // var blogRoute = require('./routes/blog');
 // var postRoute = require('./routes/post');
 
-app.use('/', portfolioRoute);
+app.use('/portfolio', portfolioRoute);
 // app.use('/blog', blogRoute);
 // app.use(process.env.POST_ROUTE, postRoute);
 
