@@ -8,16 +8,24 @@
         
         <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/css?family=Spectral+SC:300" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	</head>
   	<body>
   		<div class="header">
 	  		<div class="name">
 	  			<h1>Raymond Ajax Metrulis</h1>
 	  		</div>
-			<div class="link">
-			</div>
 		</div>
   		<div class="wrapper">
+  			<button class="project1" onclick="$('body').animate({scrollLeft: $('#step1').position().left}, 500);">
+				Project 1
+			</button>
+			<button class="project2" onclick="$('body').animate({scrollLeft: $('#step2').position().left}, 500);">
+				Project 2
+			</button>
+			<button class="project3" onclick="$('body').animate({scrollLeft: $('#step3').position().left}, 500);">
+				Project 3
+			</button>
   			<div class="static-column">
   				<div class="info-box">
 	  				<h2>Full stack web developer at your service</h2>
@@ -77,12 +85,18 @@
 		  						Sequelize
 		  					</li>
 		  					<li>
-		  						Git BASH
+		  						Git
 		  					</li>
 		  					<li>
 		  						AWS
 		  					</li>
 							<li>
+		  						Jasmine
+		  					</li>
+		  					<li>
+		  						Rails
+		  					</li>
+		  					<li>
 		  						JSON
 		  					</li>
 		  				</ul>
@@ -90,6 +104,9 @@
 		  				<ul>
 		  					<li>
 		  						Arduino
+		  					</li>
+		  					<li>
+		  						LabView
 		  					</li>
 		  				</ul>
 		  			</div>
@@ -105,19 +122,18 @@
 			</div>
 			<div id="body">
 				<div id='sections'>
-	    			<section class="step">
+	    			<section class="step" id="step0">
         				<div class="title">
         					<p>
         					I have devoted myself to many different professions and endeavors, such as film production, chemistry research, teaching the learning disabled, playing in punk bands, studying Mandarin abroad and art restoration. Coding always came up as a relevant skill no matter what I was working on at the time and was a childhood passion that I was not able to explore before. Now that I have graduated from the New York Code and Design Academy, I enjoy developing javascript based games and full stack websites that help people save money.<br/> Side scroll to check out my portfolio >>>>>>>
         					</p>
         				</div>
       				</section>
-      				<section class="step">
+      				<section class="step" id="step1">
         				<div class="title">
         					<div class="description">
         						<h4>Instagram clone app: NodeJS, Express, PostgreSQL, EJS</h4>
         						<p>
-        						CURRENTLY UNDER BRIEF MAINTENANCE, AWS DUMP COMPROMISED<br/>
         						An Instagram clone that shares its features: sign up, log in, upload image posts with descriptions, edit and delete posts, like posts, and comment on posts.
         						</p>
         					</div>
@@ -131,7 +147,7 @@
         					</div>
         				</div>
       				</section>
-      				<section class="step">
+      				<section class="step" id="step2">
         				<div class="title">
         					<div class="description">
         						<h4>An RPG made entirely with ReactJS</h4>
@@ -151,7 +167,7 @@
         					</div>
         				</div>
       				</section>
-      				<section class="step">
+      				<section class="step" id="step3">
         				<div class="title">
         					<div class="description">
         						<h4>E-commerce store locator app: ReactJS, Express, NodeJS, PostgreSQL, Leaflet</h4>

@@ -17,16 +17,30 @@ body {
 	background-color: lightblue;
 }
 
-.link {
-	width: 80%;
-	height: 100%;
+.project1, .project2, .project3 {
+	width: 16.5%;
+	height: 8%;
 	background-color: black;
     background-size: 25%;
-	position: absolute;
-	left: 40.9%;
+	position: fixed;
 	display: inline-block;
 	overflow: hidden;
-  	transform: skew(65deg);
+	right: 0;
+	color: white;
+	z-index: 10;
+}
+
+.project1 {
+	right: 16.5%;
+	top: 0%;
+}
+
+.project2 {
+	top: 0%;
+}
+
+.project3 {
+	top: 8%;
 }
 
 h1 {

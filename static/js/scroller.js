@@ -74,4 +74,7 @@ function scroller() {
 
 	return scroll;
 }
-			
+
+function scrollButton() {
+	window.scrollTo(900, 0);
+}
