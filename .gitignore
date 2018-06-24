@@ -1,0 +1,7 @@
+node_modules
+<<<<<<< HEAD
+=======
+config
+s3_config.json
+.env
+>>>>>>> ac18325... Added scrolling buttons for ease of access.

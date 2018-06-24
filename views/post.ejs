@@ -1,0 +1,26 @@
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/stylesheets/reset.css"/>
+        <link rel="stylesheet" href="/stylesheets/main.css"/>
+        <link rel="stylesheet" href="/stylesheets/post.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+  	</head>
+  	<body>
+  		<div class="form">
+			<form action="<%= route %>" method="post" enctype="application/x-www-form-urlencoded">
+				<div id="title-div">
+					<label>Title:</label>
+					<input id="title" type="text" name="title" required/><br/>
+				</div>
+				<div id="body-div">
+					<label>Body:</label>
+					<input id="body" type="text" name="body" required/>
+				</div>
+				<div>
+					<input id="submit" type="submit"/>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

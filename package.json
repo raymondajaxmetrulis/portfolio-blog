@@ -1,0 +1,42 @@
+{
+  "name": "portfolio-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "db.js",
+  "engines": {
+    "node": "6.11.2",
+    "npm": "5.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "d3": "^4.13.0",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "less-middleware": "^2.2.1",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "sequelize": "^4.36.1",
+    "sequelize-cli": "^3.2.0",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reizeismith/portfolio-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reizeismith/portfolio-blog/issues"
+  },
+  "homepage": "https://github.com/reizeismith/portfolio-blog#readme"
+}

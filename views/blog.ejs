@@ -1,0 +1,38 @@
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/stylesheets/reset.css"/>
+        <link rel="stylesheet" href="/stylesheets/main.css"/>
+        <link rel="stylesheet" href="/stylesheets/blog.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+  	</head>
+  	<body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="name">
+                    <h1>Raymond Ajax Metrulis</h1>
+                </div>
+                <a href="/portfolio">
+                    <div class="link">
+                        <p class="linkle">Portfolio</p>
+                    </div>
+                </a>
+            </div>
+        	<div class="blog">
+        		<%  posts.forEach(function(posted) { 
+        				let titles = posted.title;
+        				let created = posted.created;
+        				let bodies = posted.body;
+        		%>
+        		<div class="posts">
+        			<h1><%= titles %></h1>
+        			<h2>Posted on: <%= created %></h2>
+        			<p><%= bodies %></p>
+        			<div class="divider">
+        			</div>
+        		</div>
+    			<% }); %>
+        	</div>
+        </div>
+    </body>
+</html>
