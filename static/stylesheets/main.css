@@ -11,10 +11,18 @@ body {
 }
 
 .name {
-	float: left;
-	height: 100%;
-	width: 100%;
-	background-color: lightblue;
+	position: fixed;
+	top: -28.8%;
+	left: -25.45%;
+	width: 25.5%;
+	height: 80.1%;
+	border-top: 21.9em solid transparent;
+	border-right: 50em solid red;
+	border-bottom: 21.9em solid transparent;
+	-ms-transform: rotate(32.9deg); 
+    -webkit-transform: rotate(32.9deg);
+    transform: rotate(32.9deg);
+    overflow: visible;
 }
 
 .project1, .project2, .project3 {
