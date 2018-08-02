@@ -24,11 +24,21 @@ var scrollVis = function () {
 			.attr('class', 'about-title')
 			.text('About');
 		svg.append('svg:image')
-			.attr('xlink:href', 'images/me.jpg')
+			.attr('xlink:href', 'images/me.jpeg')
 			.attr('class', 'me');
+		svg.append('svg:image')
+			.attr('xlink:href', 'images/cats.jpg')
+			.attr('class', 'cats');
+		svg.append('svg:image')
+			.attr('xlink:href', 'images/laser.png')
+			.attr('class', 'laser');
 		svg.selectAll('.about-title')
 			.attr('opacity', 0);
 		svg.selectAll('.me')
+			.attr('opacity', 0);
+		svg.selectAll('.cats')
+			.attr('opacity', 0);
+		svg.selectAll('.laser')
 			.attr('opacity', 0);
 		
 		svg.append('text')
@@ -43,22 +53,12 @@ var scrollVis = function () {
 			.attr('opacity', 0);
 
 		svg.append('text')
-			.attr('class', 'title-two-a')
-			.text('Petty');
-		svg.append('text')
-			.attr('class', 'title-two-b')
-			.text('Cash');
-		svg.append('text')
-			.attr('class', 'title-two-c')
-			.text('Quest');
+			.attr('class', 'title-two')
+			.text('Petty Cash Quest');
 		svg.append('svg:image')
 			.attr('xlink:href', 'images/knight.jpg')
 			.attr('class', 'project-two');
-		svg.selectAll('.title-two-a')
-			.attr('opacity', 0);
-		svg.selectAll('.title-two-b')
-			.attr('opacity', 0);
-		svg.selectAll('.title-two-c')
+		svg.selectAll('.title-two')
 			.attr('opacity', 0);
 		svg.selectAll('.project-two')
 			.attr('opacity', 0);
@@ -105,6 +105,14 @@ var scrollVis = function () {
 			.transition()
 		    .duration(4000)
 		    .attr('opacity', 1.0);
+		svg.selectAll('.cats')
+			.transition()
+		    .duration(4500)
+		    .attr('opacity', 1.0);
+		svg.selectAll('.laser')
+			.transition()
+		    .duration(5000)
+		    .attr('opacity', 1.0);
 	}
 
 	function projectOne() {
@@ -116,15 +124,15 @@ var scrollVis = function () {
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		svg.selectAll('.title-two-a')
+		svg.selectAll('.cats')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		svg.selectAll('.title-two-b')
+		svg.selectAll('.laser')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		svg.selectAll('.title-two-c')
+		svg.selectAll('.title-two')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
@@ -159,15 +167,7 @@ var scrollVis = function () {
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
-		svg.selectAll('.title-two-a')
-		    .transition()
-		    .duration(1000)
-		    .attr('opacity', 1.0);
-		svg.selectAll('.title-two-b')
-		    .transition()
-		    .duration(1000)
-		    .attr('opacity', 1.0);
-		svg.selectAll('.title-two-c')
+		svg.selectAll('.title-two')
 		    .transition()
 		    .duration(1000)
 		    .attr('opacity', 1.0);
@@ -178,15 +178,7 @@ var scrollVis = function () {
 	}
 
 	function projectThree() {
-		svg.selectAll('.title-two-a')
-		    .transition()
-		    .duration(0)
-		    .attr('opacity', 0);
-		svg.selectAll('.title-two-b')
-		    .transition()
-		    .duration(0)
-		    .attr('opacity', 0);
-		svg.selectAll('.title-two-c')
+		svg.selectAll('.title-two')
 		    .transition()
 		    .duration(0)
 		    .attr('opacity', 0);
