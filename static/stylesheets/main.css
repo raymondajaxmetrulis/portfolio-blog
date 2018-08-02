@@ -25,9 +25,9 @@ body {
     overflow: visible;
 }
 
-.project1, .project2, .project3 {
+.project1, .project3 {
 	width: 16.5%;
-	height: 8%;
+	height: 4%;
 	background-color: black;
     background-size: 25%;
 	position: fixed;
@@ -36,19 +36,28 @@ body {
 	right: 0;
 	color: white;
 	z-index: 10;
+	cursor: pointer;
+	border: none;
+  	border-radius: 8%;
+  	box-shadow: 0 5px #999;
+  	outline: none;
+  	top: 76%;
+}
+
+.project1:hover, .project3:hover {background-color: red}
+
+.project1:active, .project3:active {
+  background-color: red;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
 }
 
 .project1 {
-	right: 16.5%;
-	top: 0%;
-}
-
-.project2 {
-	top: 0%;
+	left: 40%;
 }
 
 .project3 {
-	top: 8%;
+	left: 81.5%;
 }
 
 h1 {

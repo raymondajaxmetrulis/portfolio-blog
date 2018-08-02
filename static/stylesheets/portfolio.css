@@ -1,3 +1,47 @@
+#raymond, #ajax, #metrulis {
+	font-size: 30px;
+	height: 3%;
+	width: 5%;
+	position: fixed;
+	left: 1%;
+	margin-top: 1%;
+	color: black;
+	z-index: 2;
+	text-shadow: 3px 2px 3px grey, 2px 3px 3px white, 4px 3px 3px pink, 5px 1px 3px orange;
+}
+
+#raymond {
+	top: 0%;
+}
+
+#ajax{
+	top: 4%;
+}
+
+#metrulis {
+	top: 8%;
+}
+
+#left-corner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 5em solid red;
+	border-right: 20em solid transparent;
+}
+
+#right-corner {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 5em solid red;
+	border-left: 20em solid transparent;
+}
+
 .wrapper {
 	height: 100%;
 	width: 100%;
@@ -24,22 +68,22 @@ div {
 
 .info-box {
 	margin-top: 10%;
-	margin-left: 15%;
-	width: 80%;
+	margin-left: 5%;
+	width: 90%;
 	display: inline-block;
-	padding: 5%;
+	padding: 1%;
 	text-align: center;
 	color: white;
 }
 
 h2 {
 	margin-bottom: 5%;
-	font-size: 24px;
+	font-size: 16px;
 	color: white;
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 20px;
 }
 
 .front-end {
@@ -56,13 +100,15 @@ h3 {
 
 li {
 	font-size: 18px;
+	margin-top: 4%;
 }
 
 .social-links {
 	display: inline-block;
 	width: 80%;
 	height: 20%;
-	margin-left: 15%;
+	margin-left: 10%;
+	margin-top: 5%;
 	text-align: center;
 	padding-top: 2%;
 }
@@ -84,7 +130,7 @@ li {
 }
 
 svg {
-	width: 131%;
+	width: 100%;
 	height: 100%;
 	display: inline-block;
 }
@@ -94,19 +140,19 @@ svg {
 	display: inline-block;
   	position: fixed;
   	z-index: 1;
-  	border-right: 2px solid black;
-  	height: 75%;
-  	width: 38.4%;
-  	top: 8%;
-  	left: 45%;
+  	height: 100%;
+  	width: 100%;
+  	top: 4%;
+  	left: 5%;
 }
 
-.about-title, .title-two-a, .title-two-b, .title-two-c {
+.about-title, .title-one, .title-two-a, .title-two-b, .title-two-c {
 	font-size: 30px;
+	text-align: left;
 }
 
 .about-title, .title-one, .title-two-c, .title-three {
-	transform: translate(78%, 95%);
+	transform: translate(62%, 75%);
 }
 
 .title-two-a {
@@ -117,29 +163,26 @@ svg {
 	transform: translate(78%, 90%);
 }
 
-.title-one {
-	font-size: 30px;
-}
-
 .title-three {
 	font-size: 20px;
 }
 
 .me, .project-two, .project-three {
-	width: 76.25%;
+	width: 30%;
+	transform: translate(50%, 0.5%);
 }
 
 .project-one {
 	width: 71.5%;
-	transform: translate(2.5%, 0.5%);
+	transform: translate(52.5%, 0.5%);
 }
 
 #sections {
   	position: relative;
   	display: block;
   	width: 100%;
-  	height: 17%;
-  	top: 83%;
+  	height: 18%;
+  	top: 82%;
   	left: 13.5%;
   	z-index: 2;
 }
@@ -163,7 +206,7 @@ svg {
 
 p {
 	font-size: 14px;
-	line-height: 1.25;
+	line-height: 1.5;
 }
 
 h4 {
